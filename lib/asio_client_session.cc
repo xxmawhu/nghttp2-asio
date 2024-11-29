@@ -108,6 +108,8 @@ void session::on_error(error_cb cb) const { impl_->on_error(std::move(cb)); }
 
 void session::shutdown() const { impl_->shutdown(); }
 
+bool session::stopped() const { return impl_->stopped(); }
+
 boost::asio::io_service &session::io_service() const {
   return impl_->io_service();
 }

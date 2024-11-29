@@ -201,6 +201,9 @@ public:
   // Shutdowns connection.
   void shutdown() const;
 
+  // add by wangjia
+  bool stopped() const;
+
   // Returns underlying io_service object.
   boost::asio::io_service &io_service() const;
 
