@@ -40,8 +40,7 @@ set(NGHTTP2_ASIO_SOURCES
 if(ENABLE_STATIC_LIB)
   add_library(nghttp2_asio STATIC ${NGHTTP2_ASIO_SOURCES}
                                   $<TARGET_OBJECTS:url-parser>)
-  set_target_properties(nghttp2_asio_static PROPERTIES POSITION_INDEPENDENT_CODE
-                                                       ON)
+  set_target_properties(nghttp2_asio PROPERTIES POSITION_INDEPENDENT_CODE ON)
 else()
 
   add_library(nghttp2_asio SHARED ${NGHTTP2_ASIO_SOURCES}
